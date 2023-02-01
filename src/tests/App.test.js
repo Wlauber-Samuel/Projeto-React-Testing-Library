@@ -44,7 +44,7 @@ describe('Testando o componente App', () => {
       history.push('/xablau');
     });
 
-    const pageNotFound = screen.getByRole('heading', { name: /not foundcle/i });
+    const pageNotFound = screen.getByRole('heading', { name: /not found/i });
     expect(pageNotFound).toBeInTheDocument();
   });
 });
