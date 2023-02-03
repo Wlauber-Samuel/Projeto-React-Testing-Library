@@ -36,7 +36,7 @@ describe('Testando o componente Pokemon', () => {
     const btnFav = screen.getByRole('checkbox', { name: 'Pokémon favoritado?' });
     userEvent.click(btnFav);
 
-    const starIcon = screen.getByAltText('Pikachu is marked as favorite');
+    const starIcon = screen.getByAltText(/pikachu is marked as favorite/i);
     expect(starIcon).toHaveAttribute('alt', 'Pikachu is marked as favorite');
     expect(starIcon).toHaveAttribute('src', '/star-icon.svg');
     expect(starIcon).toBeInTheDocument();
